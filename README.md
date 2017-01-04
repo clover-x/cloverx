@@ -8,6 +8,6 @@ x means unknonw.
 * http2 friendly
 
 ## QuickStart
-See [clover-struct](git@git.souche.com:liujianan/clover-struct.git)
+See [cloverx-starter](https://github.com/clover-x/cloverx-starter.git)
 
 **Lucky!!**
