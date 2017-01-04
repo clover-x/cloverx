@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/clover-x/cloverx-cli.git"
+    "url": "https://github.com/clover-x/cloverx.git"
   },
   "author": "liujianan@souche.com",
   "license": "ISC",
