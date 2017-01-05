@@ -7,13 +7,17 @@
  *
  * 控制器示例
  */
-let clover = require('../../../');
+const cloverx = require('../../../');
 
-let V = clover.validator;
-let router = new clover.Router({
+let V = cloverx.validator;
+let router = new cloverx.Router({
     prefix: '/v1/home/'
 });
 
+/**
+ * 请求示例
+ * curl -X PUT -H "Content-Type: application/x-www-form-urlencoded" -d 'username=petter' "http://127.0.0.1:7077/v1/home/user/537855/username?lastActive=1483435097181"
+ */
 router.push({
     desc: '更新用户姓名',
     method: 'put',

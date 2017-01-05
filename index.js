@@ -1,6 +1,6 @@
 'use strict';
 
-const debug = require('debug')('clover:🍀 :main');
+const debug = require('debug')('cloverx:🍀 :main');
 const Koa = require('koa');
 const koaBody = require('koa-body');
 
@@ -12,8 +12,8 @@ const koaBody = require('koa-body');
  */
 function start (options) {
     /*************** 环境变量声明 ***************/
-    process.env.CLOVER_BASE_DIR = options.baseDir;
-    process.env.CLOVER_ENV = options.cloverEnv;
+    process.env.CLOVERX_BASE_DIR = options.baseDir;
+    process.env.CLOVERX_ENV = options.cloverEnv;
 
     const app = new Koa();
     /*************** 加载 Body Parser ***************/
@@ -24,6 +24,10 @@ function start (options) {
 
     /*************** 加载验证器 ***************/
     exports.validator = require('./lib/base/validator.js').V;
+
+    /*************** 加载 model ***************/
+    exports.model = new Map();
+    require('./lib/load_model.js').load(exports);
 
     /*************** 加载路由 ***************/
     require('./lib/load_controller.js').load(app);
