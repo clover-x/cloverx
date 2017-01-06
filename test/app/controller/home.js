@@ -10,9 +10,7 @@
 const cloverx = require('../../../');
 
 let V = cloverx.validator;
-let router = new cloverx.Router({
-    prefix: '/v1/home/'
-});
+let router = new cloverx.Router();
 
 /**
  * 请求示例
@@ -21,7 +19,7 @@ let router = new cloverx.Router({
 router.push({
     desc: '更新用户姓名',
     method: 'put',
-    path: 'user/:userId/username',
+    path: '/user/:userId/username',
     params: {
         userId: V.number().required()
     },
