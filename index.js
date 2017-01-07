@@ -22,6 +22,11 @@ function start (options) {
     /*************** 加载配置文件 ***************/
     exports.config = require('./lib/load_config.js');
 
+    /*************** 加载数据库模型定义 ***************/
+    exports.S = require('sequelize');
+    require('./lib/load_connection.js').load(exports);
+    require('./lib/load_schema.js').load(exports);
+
     /*************** 加载验证器 ***************/
     exports.validator = require('./lib/base/validator.js').V;
 
