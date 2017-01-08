@@ -9,7 +9,7 @@
  */
 
 const cloverx = require('../../../..');
-const schemaBundle = cloverx.mysql.get('srnhub').get('bundle');
+const schemaBundle = cloverx.mysql.get('srnhub/bundle');
 
 /**
  * 判断包名是否存在

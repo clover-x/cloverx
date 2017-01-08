@@ -22,6 +22,10 @@ function start (options) {
 
     /*************** 加载配置文件 ***************/
     exports.config = require('./lib/load_config.js');
+    
+    /*************** 加载 helper ***************/
+    exports.helper = new Container();
+    require('./lib/load_helper.js').load(exports);
 
     /*************** 加载数据库模型定义 ***************/
     exports.S = require('sequelize');

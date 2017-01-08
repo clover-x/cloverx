@@ -9,6 +9,7 @@
  */
 const cloverx = require('../../../../');
 const modelSrnBundle = cloverx.model.get('srnhub/bundle');
+const helperSemverVersion = cloverx.helper.get('semver/version');
 
 let router = new cloverx.Router();
 let V = cloverx.validator;
@@ -33,7 +34,8 @@ router.push({
         async (ctx, next) => {
             ctx.body = {
                 name: ctx.filter.params.name,
-                exists: await modelSrnBundle.isExists(ctx.filter.params.name)
+                exists: await modelSrnBundle.isExists(ctx.filter.params.name),
+                versionNumber: helperSemverVersion.versionToNumber('1.2.3')
             };
             return next();
         }
