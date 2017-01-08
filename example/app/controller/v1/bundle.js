@@ -19,7 +19,7 @@ router.push({
     method: 'get',
     path: '/:name/exists',
     params: {
-        name: V.string().max(20).required()
+        name: V.string().regex(/^[a-z-]+$/).max(20).required()
     },
     processors: [
         async (ctx, next) => {
