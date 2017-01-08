@@ -10,4 +10,7 @@ x means unknonw.
 ## QuickStart
 See [cloverx-starter](https://github.com/clover-x/cloverx-starter.git)
 
+## More
+See docs directory.
+
 **Lucky!!**
