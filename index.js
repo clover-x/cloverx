@@ -3,6 +3,7 @@
 const debug = require('debug')('cloverx:🍀 :main');
 const Koa = require('koa');
 const koaBody = require('koa-body');
+const Container = require('./lib/extend/container.js');
 
 /**
  * 启动 clover
@@ -31,7 +32,7 @@ function start (options) {
     exports.validator = require('./lib/base/validator.js').V;
 
     /*************** 加载 model ***************/
-    exports.model = new Map();
+    exports.model = new Container();
     require('./lib/load_model.js').load(exports);
 
     /*************** 加载路由 ***************/

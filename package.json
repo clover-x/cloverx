@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "DEBUG=cloverx:* node --harmony-async-await test/app/index.js"
+    "test": "./node_modules/.bin/mocha",
+    "demo": "DEBUG=cloverx:* node --harmony-async-await example/app/index.js"
   },
   "repository": {
     "type": "git",
@@ -13,6 +14,8 @@
   "author": "liujianan@souche.com",
   "license": "ISC",
   "devDependencies": {
+    "mocha": "^3.2.0",
+    "should": "^11.1.2",
     "yargs": "^6.6.0"
   },
   "dependencies": {
