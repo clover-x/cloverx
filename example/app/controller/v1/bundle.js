@@ -14,15 +14,6 @@ const helperSemverVersion = cloverx.helper.get('semver/version');
 let router = new cloverx.Router();
 let V = cloverx.validator;
 
-// 判断包是否存在
-// @url GET:/v1/bundle/:name/exists
-// params
-    // @param {String} name - 包名称
-// return {Object} {
-    // name: {:name},
-    // exists: {Boolean}
-// }
-//
 router.push({
     desc: '判断包是否存在',
     method: 'get',
@@ -37,6 +28,18 @@ router.push({
                 exists: await modelSrnBundle.isExists(ctx.filter.params.name),
                 versionNumber: helperSemverVersion.versionToNumber('1.2.3')
             };
+            return next();
+        }
+    ]
+});
+
+router.push({
+    desc: '错误处理测试',
+    method: 'get',
+    path: '/error',
+    processors: [
+        (ctx, next) => {
+            modelSrnBundle.errMethod();
             return next();
         }
     ]

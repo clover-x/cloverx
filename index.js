@@ -4,6 +4,7 @@ const debug = require('debug')('cloverx:🍀 :main');
 const Koa = require('koa');
 const koaBody = require('koa-body');
 const Container = require('./lib/extend/container.js');
+const errorHandling = require('./lib/middleware/error_handling.js');
 
 /**
  * 启动 clover
@@ -17,8 +18,12 @@ function start (options) {
     process.env.CLOVERX_ENV = options.cloverEnv;
 
     const app = new Koa();
-    /*************** 加载 Body Parser ***************/
+    /*************** 加载 中间件 ***************/
     app.use(koaBody());
+    app.use(errorHandling());
+
+    /*************** 加载 错误处理 ***************/
+    exports.Error = require('./lib/base/error.js');
 
     /*************** 加载配置文件 ***************/
     exports.config = require('./lib/load_config.js');

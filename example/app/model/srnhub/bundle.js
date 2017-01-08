@@ -25,3 +25,13 @@ async function isExists (name) {
 }
 
 exports.isExists = isExists;
+
+/**
+ *
+ * 抛出错误
+ */
+function errMethod () {
+    throw cloverx.Error.badParameter('duplicate name');
+}
+
+exports.errMethod = errMethod;
