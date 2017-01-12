@@ -5,6 +5,7 @@ const Koa = require('koa');
 const koaBody = require('koa-body');
 const Container = require('./lib/extend/container.js');
 const errorHandling = require('./lib/middleware/error_handling.js');
+const crossDomain = require('./lib/middleware/cross_domain.js');
 
 /**
  * 启动 clover
@@ -44,8 +45,14 @@ function start (options) {
     exports.model = new Container();
     require('./lib/load_model.js').load(exports);
 
+    /*************** 开启跨域 ***************/
+    app.use(crossDomain());
+
     /*************** 加载路由 ***************/
     require('./lib/load_controller.js').load(app);
+
+    /*************** 加载文档 ***************/
+    require('./lib/load_doc.js').load(exports, app);
 
     /*************** 启动应用 ***************/
     app.listen(exports.config.port, function () {

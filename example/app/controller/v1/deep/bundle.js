@@ -7,13 +7,20 @@
  *
  * 判断包是否存在
  */
-const cloverx = require('../../../../');
+const cloverx = require('../../../../../');
 const modelSrnBundle = cloverx.model.get('srnhub/bundle');
 const helperSemverVersion = cloverx.helper.get('semver/version');
 
 let router = new cloverx.Router();
 let V = cloverx.validator;
 
+/**jsdoc
+ * 判断包名是否存在
+ * @httpMethod get
+ * @path /:name/exists
+ * @param {string#path} name - 需要检查的包名, 允许字符 [a-z-]
+ * @response @ModuleExists
+ */
 router.push({
     desc: '判断包是否存在',
     method: 'get',

@@ -9,6 +9,6 @@
  */
 
 module.exports = {
-    'port': 7077,
-    'searcher': 'Baidu'
+    'host': '127.0.0.1',
+    'port': 7077
 };
