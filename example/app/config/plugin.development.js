@@ -13,5 +13,18 @@ module.exports = {
     doc: {
         pathHash: '6def414e82cdd4bbeeb8e56b7543fe35',
         host: '127.0.0.1:7077'
+    },
+    mysql: {
+        'srnhub': {
+            database: 'srnhub',
+            user: 'root',
+            password: null,
+            host: '127.0.0.1',
+            pool: {
+                max: 5,
+                min: 0,
+                idle: 10000
+            }
+        }
     }
 };
