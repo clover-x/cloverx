@@ -16,6 +16,7 @@ let V = cloverx.validator;
 
 /**jsdoc
  * 判断包名是否存在
+ * @tags client, cli
  * @httpMethod get
  * @path /:name/exists
  * @param {string#path} name - 需要检查的包名, 允许字符 [a-z-]

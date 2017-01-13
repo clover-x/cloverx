@@ -19,7 +19,7 @@
     "yargs": "^6.6.0"
   },
   "dependencies": {
-    "cloverx-doc": "^1.0.0",
+    "cloverx-doc": "^1.0.3",
     "debug": "^2.6.0",
     "joi": "^10.1.0",
     "koa": "^2.0.0",

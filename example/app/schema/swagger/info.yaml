@@ -1,0 +1,7 @@
+version: 1.0.2,
+title: cloverx doc,
+description: |
+  🍀convert cloverx api definition into swagger specific format..
+  ```javascript
+  npm install cloverx-doc
+  ```

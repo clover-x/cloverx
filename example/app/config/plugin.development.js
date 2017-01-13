@@ -12,9 +12,6 @@ module.exports = {
     // 文档配置
     doc: {
         pathHash: '6def414e82cdd4bbeeb8e56b7543fe35',
-        host: '127.0.0.1:7077',
-        info: {
-            version: '1.0.2'
-        }
+        host: '127.0.0.1:7077'
     }
 };

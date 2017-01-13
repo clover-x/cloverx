@@ -8,21 +8,17 @@
  * 数据类型定义
  */
 module.exports = {
-    Module: {
+    ModuleExists: {
         type: 'object',
-        description: 'rn 模块返回定义',
+        description: '模块是否存在',
         properties: {
             name: {
                 type: 'string',
                 description: '模块名'
             },
-            repository: {
-                type: 'string',
-                description: 'jsbundle 地址'
-            },
-            version: {
-                type: 'string',
-                description: '模块版本号'
+            exists: {
+                type: 'boolean',
+                description: '是否存在'
             }
         }
     },
