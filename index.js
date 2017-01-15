@@ -60,9 +60,12 @@ function start (options) {
     });
 }
 
-module.exports.start = start;
-
 /**
  * 路由基类
  */
 module.exports.Router = require('./lib/base/router.js');
+
+/**
+ * 启动方法
+ */
+module.exports.start = start;

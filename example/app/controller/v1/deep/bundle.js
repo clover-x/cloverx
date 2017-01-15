@@ -31,11 +31,14 @@ router.push({
     },
     processors: [
         async (ctx, next) => {
-            ctx.body = {
-                name: ctx.filter.params.name,
-                exists: await modelSrnBundle.isExists(ctx.filter.params.name),
-                versionNumber: helperSemverVersion.versionToNumber('1.2.3')
-            };
+            ctx.body = cloverx
+                .checker
+                .module('@ModuleExists')
+                .checkAndFormat({
+                    name: ctx.filter.params.name,
+                    exists: true,
+                    versionNumber: helperSemverVersion.versionToNumber('1.2.3')
+                });
             return next();
         }
     ]

@@ -11,8 +11,5 @@
 module.exports = {
     // 文档配置
     doc: {
-        info: {
-            version: '1.0.2'
-        }
     }
 };
