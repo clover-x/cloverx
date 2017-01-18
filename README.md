@@ -7,6 +7,12 @@ x means unknonw.
 * async/await
 * http2 friendly
 
+## Todo
+* async control flow
+* logger
+* application/json x-www-form-urlencoded support
+* deloy
+
 ## QuickStart
 See [cloverx-starter](https://github.com/clover-x/cloverx-starter.git)
 
