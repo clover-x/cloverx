@@ -21,6 +21,9 @@ function start (options) {
     const app = new Koa();
     const server = require('http').createServer(app.callback());
 
+    /*************** 暴露 Http 模块 ***************/
+    exports.server = server;
+
     /*************** 加载 中间件 ***************/
     app.use(koaBody());
     app.use(errorHandling());
