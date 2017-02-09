@@ -31,7 +31,5 @@ io.on('connection', function (socket) {
     socket.on('registry', function (data) {
         userSocketIdMap.set(data.userId, data);
         socketIdUserMap.set(data.socketId, data);
-
-        console.log('new User', data);
     });
 });
