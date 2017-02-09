@@ -5,7 +5,7 @@
  * Copyright (c) 2016 Souche.com, all rights
  * reserved.
  *
- * 生产环境配置文件
+ * 测试环境配置文件
  */
 
 module.exports = {

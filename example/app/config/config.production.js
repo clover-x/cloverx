@@ -9,6 +9,6 @@
  */
 
 module.exports = {
-    'port': 7078,
-    'searcher': 'Bing'
+    'host': '127.0.0.1',
+    'port': 7077
 };
