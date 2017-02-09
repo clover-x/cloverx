@@ -19,6 +19,8 @@ function start (options) {
     process.env.CLOVERX_ENV = options.cloverEnv;
 
     const app = new Koa();
+    const server = require('http').createServer(app.callback());
+
     /*************** 加载 中间件 ***************/
     app.use(koaBody());
     app.use(errorHandling());
@@ -55,9 +57,11 @@ function start (options) {
     require('./lib/load_doc.js').load(exports, app);
 
     /*************** 启动应用 ***************/
-    app.listen(exports.config.port, function () {
+    server.listen(exports.config.port, function () {
         debug('App listen on port %s', exports.config.port);
     });
+
+    return server;
 }
 
 /**
