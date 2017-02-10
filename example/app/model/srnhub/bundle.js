@@ -16,9 +16,15 @@ const schemaBundle = cloverx.mysql.get('srnhub/bundle');
  */
 async function isExists (name) {
     let result = await schemaBundle.findOne({
+        attributes: ['name', 'repository', 'version'],
         where: {
-            name: name
-        }
+            'name': item.name,
+            'platform': platform
+        },
+        order: [
+            ['versionNumber', 'desc']
+        ],
+        raw: true
     });
 
     return !!result;
