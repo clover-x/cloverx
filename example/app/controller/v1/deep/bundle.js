@@ -28,6 +28,7 @@ router.push({
     desc: '判断包是否存在',
     method: 'get',
     path: '/:name/exists',
+    // 参数位置可选值：params, body, query
     params: {
         name: V.string().regex(/^[a-z-]+$/).max(20).required()
     },
