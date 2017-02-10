@@ -5,6 +5,9 @@
  * Copyright (c) 2017 Souche.com, all rights
  * reserved.
  *
+ * mysql 基于 sequelize 实现
+ * http://docs.sequelizejs.com/
+ *
  * bundle 定义
  */
 const cloverx = require('../../../../../');

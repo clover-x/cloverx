@@ -5,6 +5,8 @@
  * Copyright (c) 2017 Souche.com, all rights
  * reserved.
  *
+ * jsdoc 语法参考 https://github.com/clover-x/cloverx-doc
+ *
  * 判断包是否存在
  */
 const cloverx = require('../../../../../');
