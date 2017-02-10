@@ -35,7 +35,7 @@ function start (options) {
     exports.config = require('./lib/load_config.js');
     
     /*************** 加载 helper ***************/
-    exports.helper = new Container();
+    exports.helper = new Container('helper');
     require('./lib/load_helper.js').load(exports);
 
     /*************** 加载数据库模型定义 ***************/
@@ -47,7 +47,7 @@ function start (options) {
     exports.validator = require('./lib/base/validator.js').V;
 
     /*************** 加载 model ***************/
-    exports.model = new Container();
+    exports.model = new Container('model');
     require('./lib/load_model.js').load(exports);
 
     /*************** 开启跨域 ***************/

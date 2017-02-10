@@ -22,6 +22,7 @@ module.exports = {
             // 如果为空，则默认值是将键名从 camelCase 转换为 underscore
             field: 'id',
             allowNull: false,
+            autoIncrement: true,
             comment: '包 ID',
         },
         name: {
