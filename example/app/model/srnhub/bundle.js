@@ -24,8 +24,6 @@ async function isExists (name) {
     return !!result;
 }
 
-exports.isExists = isExists;
-
 /**
  *
  * 抛出错误
@@ -34,4 +32,7 @@ function errMethod () {
     throw cloverx.Error.badParameter('duplicate name');
 }
 
-exports.errMethod = errMethod;
+module.exports = {
+    isExists,
+    errMethod
+};
