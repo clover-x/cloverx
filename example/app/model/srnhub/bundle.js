@@ -18,8 +18,7 @@ async function isExists (name) {
     let result = await schemaBundle.findOne({
         attributes: ['name', 'repository', 'version'],
         where: {
-            'name': item.name,
-            'platform': platform
+            'name': name
         },
         order: [
             ['versionNumber', 'desc']
@@ -28,6 +27,35 @@ async function isExists (name) {
     });
 
     return !!result;
+}
+
+/**
+ * 上传新包
+ */
+async function create (name, platform, repository, version) {
+    let exists = await schemaBundle.findOne({
+        where: {
+            name: name,
+            version: version,
+            platform: platform
+        },
+        raw: true
+    });
+
+    if(exists) {
+        throw cloverx.Error.badParameter(`${name}-${platform}@${version} does exist`);
+    }
+
+    let result = await schemaBundle
+        .build({
+            name: name,
+            platform: platform,
+            repository: repository,
+            version: version,
+        })
+        .save();
+
+    return result;
 }
 
 /**
@@ -40,5 +68,6 @@ function errMethod () {
 
 module.exports = {
     isExists,
+    create,
     errMethod
 };
