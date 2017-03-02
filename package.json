@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha",
-    "demo": "DEBUG=cloverx:* node --harmony-async-await example/app/index.js"
+    "demo": "DEBUG=cloverx:* node example/app/index.js"
   },
   "repository": {
     "type": "git",

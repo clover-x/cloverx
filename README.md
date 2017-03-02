@@ -1,22 +1,16 @@
 # 🍀cloverx
-A lightweight node framework for adventurer.
-x means unknonw.
+A lightweight node framework for adventurer. x means unknown.
 
 ## Feature
-* Based on koa2
-* async/await
-* http2 friendly
-
-## Todo
-* async control flow
-* logger
-* application/json x-www-form-urlencoded support
-* deloy
+* Based on koa2, required node >= 7.6.0
+* Api Design First - base on [cloverx-doc](https://github.com/clover-x/cloverx-doc)
+* async/await control flow
 
 ## QuickStart
-See [cloverx-starter](https://github.com/clover-x/cloverx-starter.git)
+Use [cloverx-cli](https://github.com/clover-x/cloverx-cli) init a project.  
+See [cloverx/example](https://github.com/clover-x/cloverx/tree/master/example/app) to learn how to use it.
 
-## More
+## Tips
 See docs directory.
 
 **Lucky!!**
