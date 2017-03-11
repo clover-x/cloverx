@@ -1,6 +1,6 @@
 {
   "name": "cloverx",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "yargs": "^6.6.0"
   },
   "dependencies": {
-    "cloverx-doc": "^1.2.0",
+    "cloverx-doc": "^1.2.1",
     "debug": "^2.6.0",
     "joi": "^10.1.0",
     "koa": "^2.0.0",
