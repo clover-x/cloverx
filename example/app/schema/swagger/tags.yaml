@@ -1,21 +1,6 @@
 - name: client
   description: 客户端调用
 - name: cli
-  description: |
-    Relationships are expressed using the following terms:
-
-    **outgoing_status**: Your relationship to the user. Can be "follows",
-    "requested", "none".
-    **incoming_status**: A user's relationship to you. Can be "followed_by",
-    "requested_by", "blocked_by_you", "none".
+  description: 交互脚本方法
 - name: Media
-  description: |
-    At this time, uploading via the API is not possible. We made a conscious
-    choice not to add this for the following reasons:
-
-    * Instagram is about your life on the go – we hope to encourage photos
-    from within the app.
-    * We want to fight spam & low quality photos. Once we allow uploading
-    from other sources, it's harder to control what comes into the Instagram
-    ecosystem. All this being said, we're working on ways to ensure users
-    have a consistent and high-quality experience on our platform.
+  description: 另外一个标签
