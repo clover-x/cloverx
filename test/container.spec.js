@@ -21,7 +21,7 @@ describe('#extend#container', function () {
         it('should throw key key_not_exists doet not exist', function () {
             (function() {
                 container.get('key_not_exists');
-            }).should.throw('key key_not_exists doet not exist');
+            }).should.throw('key with name key_not_exists does not exist');
         });
     });
 

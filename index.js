@@ -47,7 +47,7 @@ function start (options) {
     exports.validator = require('./lib/base/validator.js').V;
 
     /*************** 加载 model ***************/
-    exports.model = new Container('model');
+    exports.model = new Container('model', options.baseDir);
     require('./lib/load_model.js').load(exports);
 
     /*************** 开启跨域 ***************/
