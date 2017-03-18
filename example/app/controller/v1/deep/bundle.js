@@ -18,14 +18,13 @@ let V = cloverx.validator;
 
 /**jsdoc
  * 判断包名是否存在
- * @tags client, cli
+ * @tags client
  * @httpMethod get
  * @path /:name/exists
  * @param {string#path} name - 需要检查的包名, 允许字符 [a-z-]
  * @response @ModuleExists
  */
 router.push({
-    desc: '判断包是否存在',
     method: 'get',
     path: '/:name/exists',
     // 参数位置可选值：params, body, query
@@ -47,8 +46,14 @@ router.push({
     ]
 });
 
+/**jsdoc
+ * 错误测试
+ * @tags cli
+ * @httpMethod get
+ * @path /error
+ * @response null
+ */
 router.push({
-    desc: '错误处理测试',
     method: 'get',
     path: '/error',
     processors: [
