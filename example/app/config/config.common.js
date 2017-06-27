@@ -9,4 +9,10 @@
  */
 
 module.exports = {
+    // 调试信息配置
+    adapterSouche: {
+        debugIPList: [
+            '127.0.0.1'
+        ]
+    }
 };

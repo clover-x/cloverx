@@ -21,6 +21,11 @@ function start (options) {
     const app = new Koa();
     const server = require('http').createServer(app.callback());
 
+    /*************** 加载配置文件 ***************/
+    exports.config = require('./lib/load_config.js');
+    /*************** 初始化包配置 ***************/
+    require('./lib/adapter/output_souche.js').setConfig(exports.config.adapterSouche || {});
+        
     /*************** 暴露 Http 模块 ***************/
     exports.server = server;
 
@@ -30,9 +35,6 @@ function start (options) {
 
     /*************** 加载 错误处理 ***************/
     exports.Error = require('./lib/base/error.js');
-
-    /*************** 加载配置文件 ***************/
-    exports.config = require('./lib/load_config.js');
     
     /*************** 加载 helper ***************/
     exports.helper = new Container('helper');

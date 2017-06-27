@@ -38,6 +38,10 @@ module.exports = {
             msg: {
                 type: 'string',
                 description: '错误描述'
+            },
+            debug: {
+                type: 'boolean',
+                description: '是否输出调试信息'
             }
         }
     }
