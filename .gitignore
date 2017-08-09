@@ -44,6 +44,7 @@ tags
 ### Node ###
 # Logs
 logs
+!/example/logs
 *.log
 npm-debug.log*
 

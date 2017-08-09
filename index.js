@@ -3,6 +3,7 @@
 const debug = require('debug')('cloverx:🍀 :main');
 const Koa = require('koa');
 const koaBody = require('koa-body');
+const CloverxLogger = require('cloverx-logger');
 const Container = require('./lib/extend/container.js');
 const errorHandling = require('./lib/middleware/error_handling.js');
 const crossDomain = require('./lib/middleware/cross_domain.js');
@@ -31,7 +32,10 @@ function start (options) {
 
     /*************** 加载 中间件 ***************/
     app.use(koaBody());
-    app.use(errorHandling());
+    app.use(errorHandling(exports));
+
+    /*************** 加载 日志模块 ***************/
+    exports.logger = new CloverxLogger(exports.config.plugin.logger || {});
 
     /*************** 加载 错误处理 ***************/
     exports.Error = require('./lib/base/error.js');

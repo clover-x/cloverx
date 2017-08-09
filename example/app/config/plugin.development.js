@@ -36,5 +36,8 @@ module.exports = {
             password: null,
             db: '0'
         }
+    },
+    logger: {
+        logDir: './example/logs'
     }
 };

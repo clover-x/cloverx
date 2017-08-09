@@ -57,7 +57,7 @@ router.push({
     method: 'get',
     path: '/error',
     processors: [
-        (ctx, next) => {
+        async (ctx, next) => {
             modelSrnBundle.errMethod();
             return next();
         }
