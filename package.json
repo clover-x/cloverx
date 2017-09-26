@@ -22,7 +22,7 @@
     "yargs": "^6.6.0"
   },
   "dependencies": {
-    "cloverx-doc": "^1.3.4",
+    "cloverx-doc": "^1.3.5",
     "cloverx-logger": "^1.1.0",
     "debug": "^2.6.0",
     "ioredis": "^2.5.0",
